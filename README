@@ -1,0 +1,46 @@
+README
+
+ABOUT
+
+	This is a program that I wrote for a Data Structures and Algorithm Analysis class that I took. 
+	The objective was to write a program that would take and ASCII file and use Huffman Coding
+	to compress the file. In the future, I would like to find the time to make the code more
+	efficient, namely to correct my (embarrasing!) choice of bubblesort by implementing
+	a heapsort of quicksort. Please refer to P2.pdf for a detailed explanation of the assignment.
+	Thanks!
+
+To run:
+	Please compile HuffmanLibraryTester.java - this should also compile all the other code
+	that is needed. The program will prompt you to enter the name of the file to be decoded, 
+	which is test_file.txt, and a name for the target file. The coded binary file will be placed
+	in the present working directory.
+	
+	Running will also place a file called file called code_strings.txt, containing an readable 
+	representation of the code sequence of (of 1's and 0's) generated for the input file - the 
+	huffman encoding used to generate binar file - in the pwd.
+	 
+	
+Running time:
+	About 7 minutes on my computer.
+	
+Actual amount of compression:
+	original file size = 102,783 Bytes
+	compressed file size = 77,486 Bytes
+	
+	1 - 77486/102783 * 100 ~ 25% of original file size saved by compression
+	
+Notes about the implementation:
+	I tried to implement getSortedLinkedList() using insertion sort as recommended in the problem
+	statment, but there were bugs in it that I just couldn't find so out of frustration/desperation 
+	I wrote a bubble sort algorithm. I realize that this is not a very efficient algorithm, but
+	since it is only sorting a list of at most 126 items, I do not think it will take too long.
+	
+	I tried to save some time by creating a String[] to hold the String codes that correspond
+	to the characters from the tree. The index of a given code is the int equivalent of the ascii
+	character that the code represents, so finding the code for a given character is simply a matter
+	of accessing the array, and should be O(1). Also I don't think it should take very long to build 
+	the array.
+	
+
+	
+	
